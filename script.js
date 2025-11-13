@@ -1,13 +1,15 @@
 function init() {
-  const textInput = document.getElementById('textInput');
-  const displayHeading = document.getElementById('displayHeading');
 
-  alertButton.addEventListener('click', function() {
+  const alertDiv = document.getElementById('entrybutton');
+  const textInput = document.getElementById('entryinput');
+  const outputText = document.getElementById('textoutput');
+
+  alertDiv.addEventListener('click', function() {
     const userText = textInput.value;
 
     alert("McCory: " + userText);
 
-    displayHeading.textContent = userText;
+    outputText.textContent = userText;
   });
 }
 
