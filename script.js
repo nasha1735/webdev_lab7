@@ -1,14 +1,17 @@
-function init(){
- var alert = document.getElementById("entrybutton").addEventListener("click", myFunction);
-}
+function init() {
+  const alertDiv = document.getElementById('alertDiv');
+  const textInput = document.getElementById('textInput');
+  const displayHeading = document.getElementById('displayHeading');
 
-function myFunction() {
-  var txt = document.getElementById("entryinput").value;
+  alertDiv.addEventListener('click', function() {
+  
+    const userText = textInput.value;
 
-  document.getElementById("textoutput").innerHTML = txt;
+    alert("YourNameHere: " + userText);
 
 
-  alert("Danasha: " + txt);
+    displayHeading.textContent = userText;
+  });
 }
 
 window.addEventListener('load', init);
